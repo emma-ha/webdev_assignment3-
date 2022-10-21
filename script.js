@@ -18,7 +18,13 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    let row = document.getElementsByTagName("tr");
+    size = row.length - 1
+    let removed = row[size];
+    if(removed.parentNode)
+    {
+        removed.parentNode.removeChild(removed);
+    }
 }
 
 // Remove a column
