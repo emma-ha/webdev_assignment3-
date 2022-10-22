@@ -13,7 +13,10 @@ function addR() {
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    let column = document.createElement("td");
+    let x = document.createElement("tr");
+    column.appendChild(x);
+    grid.children[0].appendChild(column);
 }
 
 // Remove a row
@@ -29,7 +32,13 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    let column = document.getElementsByTagName("td");
+    size = column.length - 1
+    let removed = column[size];
+    if(removed.parentNode)
+    {
+        removed.parentNode.removeChild(removed);
+    }
 }
 
 // Set global variable for selected color
