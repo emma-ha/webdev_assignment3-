@@ -62,5 +62,7 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    [...document.querySelectorAll('td')].forEach((all) => {
+        all.style.backgroundColor = '#FFFFFF';
+      });
 }
