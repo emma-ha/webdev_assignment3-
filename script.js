@@ -21,9 +21,9 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    let row = document.getElementsByTagName("tr");
-    size = row.length - 1
-    let removed = row[size];
+    let numRows = document.getElementsByTagName('tr');
+    size = numRows.length - 1
+    let removed = numRows[size];
     if(removed.parentNode)
     {
         removed.parentNode.removeChild(removed);
@@ -32,9 +32,9 @@ function removeR() {
 
 // Remove a column
 function removeC() {
-    let column = document.getElementsByTagName("td");
-    size = column.length - 1
-    let removed = column[size];
+    let numCols = document.getElementsByTagName('td');
+    size = numCols.length - 1
+    let removed = numCols[size];
     if(removed.parentNode)
     {
         removed.parentNode.removeChild(removed);
