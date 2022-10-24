@@ -51,10 +51,9 @@ function selectColor(){
 function fillU(){
     let color = document.getElementById("selectedColorId").value;
     [...document.querySelectorAll("td")].forEach((all) => {
-      if (
-        (all.style.backgroundColor != "Red" || all.style.backgroundColor != "Blue" || 
-          all.style.backgroundColor != "Green" || all.style.backgroundColor != "Yellow")
-         )
+      if
+        (
+          all.style.backgroundColor == "")
         all.style.backgroundColor = color;
     });
 }
