@@ -2,21 +2,22 @@
 let numRows = 0;
 let numCols = 0;
 let colorSelected; 
+window.onload = one_box;
 
 // Add a row
 function addR() {
-    let row = document.createElement("tr");
+    let numRows = document.createElement("tr");
     let x = document.createElement("td");
-    row.appendChild(x);
-    grid.children[0].appendChild(row);
+    numRows.appendChild(x);
+    grid.children[0].appendChild(numRows);
 }
 
 // Add a column
 function addC() {
-    let column = document.createElement("td");
+    let numCols = document.createElement("td");
     let x = document.createElement("tr");
-    column.appendChild(x);
-    grid.children[0].appendChild(column);
+    numCols.appendChild(x);
+    grid.children[0].appendChild(numCols);
 }
 
 // Remove a row
@@ -71,4 +72,13 @@ function clearAll(){
     [...document.querySelectorAll('td')].forEach((all) => {
         all.style.backgroundColor = '#FFFFFF';
       });
+}
+
+//Click for color
+function one_box() {
+    grid.addEventListener("click", function (i) 
+    {
+      let selected = document.getElementById("selectedColorId").value;
+      i.target.style.backgroundColor = selected;
+    });
 }
