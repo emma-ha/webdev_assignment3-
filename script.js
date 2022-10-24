@@ -78,7 +78,7 @@ function clearAll(){
 function one_box() {
     grid.addEventListener("click", function (i) 
     {
-      let selected = document.getElementById("selectedColorId").value;
-      i.target.style.backgroundColor = selected;
+      let color = document.getElementById("selectedColorId").value;
+      i.target.style.backgroundColor = color;
     });
 }
