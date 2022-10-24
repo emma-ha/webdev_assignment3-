@@ -49,7 +49,14 @@ function selectColor(){
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    let selected = document.getElementById("selectedColorId").value;
+    [...document.querySelectorAll("td")].forEach((all) => {
+      if (
+        (all.style.backgroundColor != "Red" || all.style.backgroundColor != "Blue" || 
+          all.style.backgroundColor != "Green" || all.style.backgroundColor != "Yellow")
+         )
+        all.style.backgroundColor = selected;
+    });
 }
 
 // Fill all cells
