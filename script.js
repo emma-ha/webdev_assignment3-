@@ -14,10 +14,19 @@ function addR() {
 
 // Add a column
 function addC() {
-    let numCols = document.createElement("td");
-    let x = document.createElement("tr");
-    numCols.appendChild(x);
-    grid.children[0].appendChild(numCols);
+    if (document.querySelector("tr").length == 0) 
+    {
+        let numCols = document.createElement("td");
+        let x = document.createElement("tr");
+        numCols.appendChild(x);
+        grid.children[0].appendChild(numCols);
+    } 
+    else 
+    {
+        [...document.querySelectorAll("#grid tr")].forEach((r) => {
+            r.appendChild(document.createElement("td"));
+        });
+    }
 }
 
 // Remove a row
